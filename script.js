@@ -1,5 +1,5 @@
-const czLink = "https://clicknclick.space/a/pYJkIAyAWCY0YA";
-const globalLink = "https://clicknclick.space/a/pYJkIAyAWCY0YA";
+const czLink = "https://safeoffers.pro/a/M8LJc6Mz6UJRl9";
+const globalLink = "https://safeoffers.pro/a/M8LJc6Mz6UJRl9";
 
 async function getVisitorCountry() {
   try {
