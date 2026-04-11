@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Find Your Perfect Match Tonight</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Find Singles Near You</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <div class="container">
-    <h1>🔥 Find Singles Near You Tonight</h1>
-    <p>Thousands of attractive people are waiting to meet you.</p>
+<div class="container">
 
-    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e"
-         alt="dating"
-         class="hero-img">
+    <h1 id="headline">💘 Find Singles Near You</h1>
+    <p id="geoText">Loading matches near you...</p>
 
-    <button id="joinBtn">Join Now Free</button>
+    <!-- Step 1 -->
+    <div id="step1" class="box">
+        <p>Are you over 18 years old?</p>
+        <button onclick="nextStep(2)">Yes</button>
+        <button onclick="nextStep(2)">No</button>
+    </div>
 
-    <p class="disclaimer">You must be 18+ to enter.</p>
-  </div>
+    <!-- Step 2 -->
+    <div id="step2" class="box hidden">
+        <p>What are you looking for?</p>
+        <button onclick="nextStep(3)">Casual Dating</button>
+        <button onclick="nextStep(3)">Serious Relationship</button>
+    </div>
+
+    <!-- Step 3 -->
+    <div id="step3" class="box hidden">
+        <p id="searchText">Searching...</p>
+    </div>
+
+</div>
 
 <script src="script.js"></script>
 </body>
