@@ -1,22 +1,34 @@
-const czLink = "https://safeoffers.pro/a/M8LJc6Mz6UJRl9";
-const globalLink = "https://safeoffers.pro/a/M8LJc6Mz6UJRl9";
+// 👉 PUT YOUR SMARTLINK HERE
+const SMARTLINK = "https://safeoffers.pro/a/ADP32s5l4H9pEL";
 
-async function getVisitorCountry() {
-  try {
-    const response = await fetch("https://ipapi.co/json/");
-    const data = await response.json();
-    return data.country_code;
-  } catch (error) {
-    return null;
-  }
-}
+// GEO Detection
+fetch("https://ipapi.co/json/")
+.then(res => res.json())
+.then(data => {
+    let country = data.country_name || "your area";
+    let city = data.city || "";
 
-document.getElementById("joinBtn").addEventListener("click", async () => {
-  const country = await getVisitorCountry();
+    document.getElementById("headline").innerText =
+        "💘 Singles in " + country + " are waiting";
 
-  if (country === "CZ") {
-    window.location.href = czLink;
-  } else {
-    window.location.href = globalLink;
-  }
+    document.getElementById("geoText").innerText =
+        "🔥 People near " + (city ? city : country) + " are online now";
+
+    document.getElementById("searchText").innerText =
+        "🔍 Searching matches in " + country + "...";
+})
+.catch(() => {
+    document.getElementById("geoText").innerText =
+        "🔥 People near you are online now";
 });
+
+function nextStep(step) {
+    document.querySelectorAll('.box').forEach(el => el.classList.add('hidden'));
+    document.getElementById('step' + step).classList.remove('hidden');
+
+    if (step === 3) {
+        setTimeout(() => {
+            window.location.href = SMARTLINK;
+        }, 2500);
+    }
+}
