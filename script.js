@@ -1,5 +1,5 @@
 // ✅ Your Smartlink (already added)
-const SMARTLINK = "https://safeoffers.pro/a/zpKMETzw6tKk4P";
+const SMARTLINK = "https://safeoffers.pro/a/BBL32ulp8lujLzR";
 
 // 🔍 Detect source (URL param + referrer fallback)
 function getSource() {
